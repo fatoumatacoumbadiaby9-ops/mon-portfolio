@@ -1,0 +1,308 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #d5d4e2, #00d4ff, #ff6b9d);
+  min-height: 100vh;
+}
+
+/* ---------------- NAVBAR ---------------- */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  height: 8vh;
+  color: white;
+}
+
+.logo {
+  width: 60px;
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.nav_left {
+  display: flex;
+  align-items: center;
+}
+
+.lien {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.lien a {
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.lien a:hover {
+  color: #007bff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .lien {
+    display: none;
+  }
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box_hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  gap: 40px;
+}
+
+/* GAUCHE */
+.hero_gauche {
+  width: 50%;
+}
+
+.hero_gauche h1 {
+  font-size: 40px;
+}
+
+.hero_gauche h2 {
+  font-size: 35px;
+  color: #007bff;
+}
+
+.hero_gauche p {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+/* BOUTONS */
+.hero_btn {
+  display: flex;
+  gap: 15px;
+}
+
+.hero_btn1,
+.hero_btn2 {
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* bouton principal */
+.hero_btn1 {
+  background: #007bff;
+  color: white;
+  border: none;
+}
+
+.hero_btn1:hover {
+  background: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* bouton secondaire */
+.hero_btn2 {
+  border: 2px solid #007bff;
+  background: transparent;
+  color: #007bff;
+}
+
+.hero_btn2:hover {
+  background: #007bff;
+  color: white;
+  transform: translateY(-3px);
+}
+
+button {
+  outline: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* DROITE */
+.hero_droite {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero_droite img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #007bff;
+}
+
+/* RESPONSIVE HERO */
+@media (max-width: 768px) {
+  .box_hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero_gauche,
+  .hero_droite {
+    width: 100%;
+  }
+}
+
+/* ---------------- COMPETENCES ---------------- */
+.competences {
+  padding: 80px 20px;
+  background: #f5f7fa;
+  text-align: center;
+}
+
+.title {
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* GRID */
+.mes_competences {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* CARD */
+.un_competence {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.un_competence:hover {
+  transform: translateY(-5px);
+}
+
+/* HEADER */
+.skill_header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* BARRE */
+.bar {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  border-radius: 10px;
+  transition: width 1s ease;
+}
+/* ---------------- PROJETS ---------------- */
+.projet {
+  padding: 5%;
+}
+
+.projet h1 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.mes_projet {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.un_projet {
+  border-radius: 20px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.un_projet img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box_projet {
+  display: none;
+}
+
+.un_projet:hover .box_projet {
+  display: flex;
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.box_projet p {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.technos {
+  display: flex;
+  gap: 10px;
+}
+
+.technos span {
+  color: gold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .mes_projet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  height: 10vh;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
